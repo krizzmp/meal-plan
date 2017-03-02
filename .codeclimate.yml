@@ -1,4 +1,5 @@
-eslint:
-  parserOptions:
-    sourceType:
-      'module'
+engines:
+  eslint:
+    parserOptions:
+      sourceType:
+        'module'
