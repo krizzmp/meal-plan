@@ -29,7 +29,7 @@ export default compose(
   withState('title', 'setTitle', p => p.ing.text),
   withState('desc', 'setDesc', p => p.ing.unit)
 )(
-  class extends React.Component {
+  class CreateShopItem extends React.Component {
     aia(price, amount) {
       this.props.setShopItems([ ...this.props.shopItems, { price, amount } ]);
     }
