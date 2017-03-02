@@ -1,7 +1,10 @@
-ecmaFeatures:
-  modules: true
-  jsx: true
-
+parserOptions:
+  sourceType: "module"
+  ecmaVersion: 8
+  parser: "babel-eslint"
+  ecmaFeatures:
+    experimentalObjectRestSpread:true
+    jsx: true
 env:
   amd: true
   browser: true
