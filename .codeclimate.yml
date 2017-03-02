@@ -1,5 +1,5 @@
 engines:
   eslint:
+    enabled: true
     parserOptions:
-      sourceType:
-        'module'
+      sourceType: 'module'
