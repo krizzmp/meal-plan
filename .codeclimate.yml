@@ -8,7 +8,7 @@ engines:
       - .es6
       - .js
       - .jsx
-      config: .eslintrc
+      config: .eslintrc.json
   duplication:
     enabled: true
     config:
