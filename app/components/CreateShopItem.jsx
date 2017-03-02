@@ -3,11 +3,10 @@ import { List, ListItem } from 'material-ui/List';
 import { Card, CardHeader } from 'material-ui/Card';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import { compose, withState } from 'recompose';
-import IngredientAdder from './IngredientAdder';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import { AppBar, FlatButton, IconButton, IconMenu, MenuItem, TextField } from 'material-ui';
 import { grey400 } from 'material-ui/styles/colors';
-import {curry, propEq, reject, remove} from 'ramda';
+import {curry, remove} from 'ramda';
 import ShopItemAdder from './ShopItemAdder';
 const iconButtonElement = (
   <IconButton touch={true}>
@@ -39,7 +38,6 @@ export default compose(
     }
     render() {
       let p = this.props;
-      console.log(p);
       return (
         <div id="content">
           <AppBar
