@@ -3,3 +3,8 @@ engines:
     enabled: true
     parserOptions:
       sourceType: 'module'
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
