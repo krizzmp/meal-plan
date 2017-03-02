@@ -1,5 +1,6 @@
 engines:
   eslint:
+    channel: "eslint-3"
     enabled: true
     parserOptions:
       sourceType: 'module'
