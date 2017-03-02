@@ -12,6 +12,9 @@
       "jsx": true
     }
   },
+  "rules": {
+    "complexity": [2, 6]
+  },
   "plugins": [
     "react"
   ],
