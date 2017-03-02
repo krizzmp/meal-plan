@@ -8,10 +8,8 @@
     "ecmaVersion": 8,
     "parser": "babel-eslint",
     "ecmaFeatures": {
-      "modules": true,
-      "spread" : true,
-      "restParams" : true,
-      "experimentalObjectRestSpread":true
+      "experimentalObjectRestSpread":true,
+      "jsx": true
     }
   },
   "plugins": [
