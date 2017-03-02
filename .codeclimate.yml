@@ -3,6 +3,12 @@ engines:
     enabled: true
     parserOptions:
       sourceType: 'module'
+    config:
+      extensions:
+      - .es6
+      - .js
+      - .jsx
+      config: .eslintrc
   duplication:
     enabled: true
     config:
