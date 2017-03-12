@@ -6,10 +6,8 @@ parserOptions:
     experimentalObjectRestSpread: true
     jsx: true
 env:
-  amd: true
   browser: true
   es6: true
-  jquery: true
   node: true
 
 plugins:
@@ -18,7 +16,3 @@ plugins:
 extends:
   - "eslint:recommended"
   - "plugin:react/recommended"
-
-# http://eslint.org/docs/rules/
-rules:
-  complexity: [2, 6]
