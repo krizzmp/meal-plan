@@ -24,18 +24,7 @@ const LI = curry((remIngredient, i) => (
     rightIconButton={rightIconMenu(() => remIngredient(i.ingredient))}
   />
 ));
-
-export default compose(
-  withState('ingredients', 'setIngredients', []),
-  withState('title', 'setTitle', ''),
-  withState('desc', 'setDesc', ''),
-  withProps(p => ({
-    cni: (ing, unit) => p.addIngredient(ing, unit),
-    aia: (ing, amount, unit) =>
-      p.setIngredients([ ...p.ingredients, { ingredient: ing, amount, unit } ]),
-    remIng: id => p.setIngredients(reject(propEq('ingredient', id), p.ingredients))
-  }))
-)(p => (
+const CreateRecipe = p => (
   <div id="content">
     <AppBar
       title="Spaghetti Carbonara"
@@ -81,4 +70,15 @@ export default compose(
       </List>
     </Card>
   </div>
-));
+);
+export default compose(
+  withState('ingredients', 'setIngredients', []),
+  withState('title', 'setTitle', ''),
+  withState('desc', 'setDesc', ''),
+  withProps(p => ({
+    cni: (ing, unit) => p.addIngredient(ing, unit),
+    aia: (ing, amount, unit) =>
+      p.setIngredients([ ...p.ingredients, { ingredient: ing, amount, unit } ]),
+    remIng: id => p.setIngredients(reject(propEq('ingredient', id), p.ingredients))
+  }))
+)(CreateRecipe);
