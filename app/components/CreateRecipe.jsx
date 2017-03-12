@@ -7,7 +7,7 @@ import IngredientAdder from './IngredientAdder';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import { AppBar, FlatButton, IconButton, IconMenu, MenuItem, TextField } from 'material-ui';
 import { grey400 } from 'material-ui/styles/colors';
-import { propEq, reject } from 'ramda';
+import {curry, propEq, reject} from 'ramda';
 const iconButtonElement = (
   <IconButton touch={true}>
     <MoreVertIcon color={grey400} />
@@ -18,13 +18,12 @@ const rightIconMenu = remIngredient => (
     <MenuItem onTouchTap={remIngredient}>Delete</MenuItem>
   </IconMenu>
 );
-const LI = remIngredient =>
-  i => (
-    <ListItem
-      primaryText={`${i.amount}${i.unit} ${i.ingredient}`}
-      rightIconButton={rightIconMenu(() => remIngredient(i.ingredient))}
-    />
-  );
+const LI = curry((remIngredient, i) => (
+  <ListItem
+    primaryText={`${i.amount}${i.unit} ${i.ingredient}`}
+    rightIconButton={rightIconMenu(() => remIngredient(i.ingredient))}
+  />
+));
 export default compose(
   withState('ingredients', 'setIngredients', []),
   withState('title', 'setTitle', ''),
