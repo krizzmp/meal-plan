@@ -4,7 +4,12 @@ engines:
     enabled: true
     parserOptions:
       sourceType: 'module'
-    config: .eslintrc.yml
+    config:
+      extensions:
+      - .es6
+      - .js
+      - .jsx
+      config: .eslintrc.yml
   duplication:
     enabled: true
     config:
