@@ -9,8 +9,6 @@ env:
   browser: true
   es6: true
   node: true
-plugins:
-  - "react"
 extends:
-  - "eslint:recommended"
-  - "plugin:react/recommended"
+  - "standard"
+  - "standard-react"
