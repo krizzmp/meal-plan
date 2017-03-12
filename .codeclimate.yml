@@ -1,14 +1,15 @@
 engines:
   eslint:
     enabled: true
-    channel: "eslint-2"
-    parserOptions:
-      sourceType: 'module'
+    channel: "eslint-3"
     config:
+      config: ".eslintrc.yml"
       extensions:
-      - .es6
-      - .js
-      - .jsx
+      - ".js"
+      - ".jsx"
+    checks:
+      complexity:
+        enabled: true
   duplication:
     enabled: true
     config:
