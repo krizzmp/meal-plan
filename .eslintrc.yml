@@ -1,6 +1,7 @@
 parserOptions:
   sourceType: "module"
-  ecmaVersion: 8
+  parser: "babel-eslint"
+  ecmaVersion: 6
   ecmaFeatures:
     experimentalObjectRestSpread: true
     jsx: true
