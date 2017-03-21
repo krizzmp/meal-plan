@@ -1,5 +1,5 @@
 //@flow
-import * as types from './types'
+import * as types from './types';
 
 export const addIngredient = (ingredient, unit) => ({
   type: types.ADD_INGREDIENT,
@@ -11,11 +11,11 @@ export const updateIngredient = (text, newIng) => ({
   text,
   newIng
 });
-export const addRecipe = recipe => ({
+export const addRecipe = (recipe) => ({
   type: types.ADD_RECIPE,
   recipe
 });
-export const remRecipe = recipeID => ({
+export const remRecipe = (recipeID) => ({
   type: types.REM_RECIPE,
   recipeID
 });

@@ -1,7 +1,8 @@
-import React, {PropTypes as pt} from 'react';
+//@flow
+import React from 'react';
 import {List, ListItem} from 'material-ui/List';
 import {Card, CardHeader} from 'material-ui/Card';
-import IngredientAdder from '../components/IngredientAdder.jsx';
+import IngredientAdder from '../components/IngredientAdder';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import {AppBar, FlatButton, IconButton, IconMenu, MenuItem, TextField} from 'material-ui';
 import {grey400} from 'material-ui/styles/colors';
@@ -26,18 +27,20 @@ const listItem = curry((remIngredient, i) => (
 ));
 
 export default class CreateRecipe extends React.Component {
-  static propTypes = {
-    router: pt.shape({push: pt.func}),
-    title: pt.string,
-    desc: pt.string,
-    ingredients: pt.arrayOf(pt.string),
-    ingredientList: pt.arrayOf(pt.string),
-    addRecipe: pt.func,
-    setTitle: pt.func,
-    setDesc: pt.func,
-    aia: pt.func,
-    cni: pt.func,
-    remIng: pt.func
+  props:{
+    router:{
+      push:(url:string)=>void
+    },
+    title:string,
+    desc:string,
+    ingredients:string[],
+    ingredientList:string[],
+    addRecipe:Function,
+    setTitle:Function,
+    setDesc:Function,
+    aia:Function,
+    cni:Function,
+    remIng:Function,
   }
   _handleClose() {
     this.props.router.push('/recipes');
@@ -48,10 +51,10 @@ export default class CreateRecipe extends React.Component {
     this.props.addRecipe({title, description: desc, ingredients});
     this.props.router.push('/recipes');
   }
-  _handleTitleChange(e, v) {
+  _handleTitleChange(e:any, v:string) {
     this.props.setTitle(v);
   }
-  _handleDescriptionChange(e, v) {
+  _handleDescriptionChange(e:any, v:string) {
     this.props.setDesc(v);
   }
   render() {
