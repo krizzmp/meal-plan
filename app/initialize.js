@@ -1,6 +1,7 @@
+//@flow
 import ReactDOM from 'react-dom';
 import React from 'react';
-import App from 'components/App';
+import App from './views/pages/App';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // Needed for onTouchTap

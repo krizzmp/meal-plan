@@ -1,7 +1,7 @@
 parserOptions:
   sourceType: "module"
   parser: "babel-eslint"
-  ecmaVersion: 6
+  ecmaVersion: 8
   ecmaFeatures:
     experimentalObjectRestSpread: true
     jsx: true
@@ -12,5 +12,10 @@ env:
 plugins:
   - "react"
 extends:
-  - "eslint:all"
-  - "plugin:react/all"
+  - "eslint:recommended"
+  - "eventbrite-react"
+rules:
+  "react/prop-types": [2]
+  "react/jsx-indent-props": [2, 2]
+  "react/jsx-indent": [2, 2]
+  "indent": [2, 2]

@@ -1,6 +1,8 @@
-import { ADD_INGREDIENT, ADD_RECIPE, REM_RECIPE, UPDATE_INGREDIENT } from '../actions/app';
+//@flow
+import { ADD_INGREDIENT, ADD_RECIPE, REM_RECIPE, UPDATE_INGREDIENT } from '../redux/types';
 import { combineReducers } from 'redux';
 import { append, findIndex, lensIndex, propEq, reject, set } from 'ramda';
+
 const _ingredientList = [
   { text: 'Spaghetti', value: 'someFirstValue', unit: 'stk', shopItems: [] },
   { text: 'Basmati Rice', value: 'someFirstValue', unit: 'stk', shopItems: [] },
